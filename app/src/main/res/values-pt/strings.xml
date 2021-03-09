@@ -8,4 +8,10 @@
     <string name="observation">Observação</string>
     <string name="start">Começar</string>
     <string name="personalNotes">Notas Pessoais</string>
+    <string name="save_note">Nota salva!</string>
+    <string name="save_note_error">Nota não foi salva, campos vazios</string>
+    <string name="edit_note_error">Nota não foi editada, campos vazios</string>
+    <string name="delete_note_error">Nota não foi apagada, campos vazios</string>
+    <string name="edit_note">Nota editada!</string>
+    <string name="delete_note">Nota apagada!</string>
 </resources>

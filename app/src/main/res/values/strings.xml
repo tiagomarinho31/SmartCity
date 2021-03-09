@@ -6,5 +6,11 @@
     <string name="title">Title</string>
     <string name="observation">Observation</string>
     <string name="start">Start</string>
-    <string name="personalNotes">Personal Notes</string>
+    <string name="personalNotes">Personal notes</string>
+    <string name="save_note">Note saved!</string>
+    <string name="save_note_error">Note not saved, fields empty</string>
+    <string name="edit_note">Note edited!</string>
+    <string name="edit_note_error">Note not edited, fields empty</string>
+    <string name="delete_note">Note deleted!</string>
+    <string name="delete_note_error">Note not deleted, fields empty</string>
 </resources>
