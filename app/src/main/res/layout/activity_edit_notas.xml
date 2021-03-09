@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/titulo_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/title"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/observacao_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/observation"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/primaryColor"
+        android:text="@string/edit"
+        android:textColor="@color/primaryTextColor" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/primaryColor"
+        android:text="@string/delete"
+        android:textColor="@color/primaryTextColor" />
+
+</LinearLayout>

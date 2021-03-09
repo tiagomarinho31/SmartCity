@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart City</string>
+    <string name="edit">Editar</string>
+    <string name="insert">Inserir</string>
+    <string name="delete">Apagar</string>
+    <string name="title">Título</string>
+    <string name="observation">Observação</string>
+    <string name="start">Começar</string>
+    <string name="personalNotes">Notas Pessoais</string>
+</resources>
