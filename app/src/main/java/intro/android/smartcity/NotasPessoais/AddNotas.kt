@@ -25,21 +25,23 @@ class AddNotas : AppCompatActivity() {
         val button = findViewById<Button>(R.id.button_save)
         button.setOnClickListener {
             val replyIntent = Intent()
-            if (TextUtils.isEmpty(editTituloView.text)) {
+            if (TextUtils.isEmpty(editTituloView.text) || TextUtils.isEmpty(editObservacaoView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val titulo = editTituloView.text.toString()
                 replyIntent.putExtra(TITULO, titulo)
+                val observacao = editObservacaoView.text.toString()
+                replyIntent.putExtra(OBSERVACAO, observacao)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
 
-            if (TextUtils.isEmpty(editObservacaoView.text)) {
+            /*if (TextUtils.isEmpty(editObservacaoView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val observacao = editObservacaoView.text.toString()
                 replyIntent.putExtra(OBSERVACAO, observacao)
                 setResult(Activity.RESULT_OK, replyIntent)
-            }
+            }*/
             finish()
         }
     }

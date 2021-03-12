@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Smart City</string>
+    <string name="text_app">An application that allows a quick and effective connection between the citizen and the city!</string>
+
     <string name="edit">Edit</string>
     <string name="insert">Insert</string>
     <string name="delete">Delete</string>

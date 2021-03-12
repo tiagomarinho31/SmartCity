@@ -32,44 +32,51 @@ class EditNotas : AppCompatActivity() {
         button.setOnClickListener {
             val replyIntent = Intent()
             replyIntent.putExtra(EDIT_ID, id)
-            if (TextUtils.isEmpty(editTituloView.text)) {
+            if (TextUtils.isEmpty(editTituloView.text)  || TextUtils.isEmpty(editObservacaoView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val edit_titulo = editTituloView.text.toString()
                 replyIntent.putExtra(EDIT_TITULO, edit_titulo)
+                //replyIntent.putExtra(STATUS, "EDIT")
+                //setResult(Activity.RESULT_OK, replyIntent)
+                val edit_observacao = editObservacaoView.text.toString()
+                replyIntent.putExtra(EDIT_OBSERVACAO, edit_observacao)
                 replyIntent.putExtra(STATUS, "EDIT")
                 setResult(Activity.RESULT_OK, replyIntent)
             }
 
-            if (TextUtils.isEmpty(editObservacaoView.text)) {
+            /*if (TextUtils.isEmpty(editObservacaoView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 val edit_observacao = editObservacaoView.text.toString()
                 replyIntent.putExtra(EDIT_OBSERVACAO, edit_observacao)
                 replyIntent.putExtra(STATUS, "EDIT")
                 setResult(Activity.RESULT_OK, replyIntent)
-            }
+            }*/
             finish()
         }
 
         val button_delete = findViewById<Button>(R.id.button_delete)
         button_delete.setOnClickListener {
             val replyIntent = Intent()
-            if (TextUtils.isEmpty(editTituloView.text)) {
+            if (TextUtils.isEmpty(editTituloView.text)  || TextUtils.isEmpty(editObservacaoView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
+                replyIntent.putExtra(DELETE_ID, id)
+                //replyIntent.putExtra(STATUS, "DELETE")
+                //setResult(Activity.RESULT_OK, replyIntent)
                 replyIntent.putExtra(DELETE_ID, id)
                 replyIntent.putExtra(STATUS, "DELETE")
                 setResult(Activity.RESULT_OK, replyIntent)
             }
 
-            if (TextUtils.isEmpty(editObservacaoView.text)) {
+            /*if (TextUtils.isEmpty(editObservacaoView.text) && TextUtils.isEmpty(editTituloView.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 replyIntent.putExtra(DELETE_ID, id)
                 replyIntent.putExtra(STATUS, "DELETE")
                 setResult(Activity.RESULT_OK, replyIntent)
-            }
+            }*/
             finish()
         }
 

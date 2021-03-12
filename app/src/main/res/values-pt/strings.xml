@@ -14,4 +14,5 @@
     <string name="delete_note_error">Nota não foi apagada, campos vazios</string>
     <string name="edit_note">Nota editada!</string>
     <string name="delete_note">Nota apagada!</string>
+    <string name="text_app">Uma aplicação que permite uma ligação rápida e eficaz entre o cidadão e a cidade!</string>
 </resources>
