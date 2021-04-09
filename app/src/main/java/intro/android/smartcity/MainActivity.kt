@@ -17,4 +17,9 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, NotasPessoais::class.java)
         startActivity(intent)
     }
+
+    fun problemasList(view: View) {
+        val intent = Intent(this, Problema_List::class.java)
+        startActivity(intent)
+    }
 }

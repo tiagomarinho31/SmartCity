@@ -36,6 +36,7 @@
         android:layout_margin="16dp"
         android:background="@color/primaryColor"
         android:text="@string/start"
+        android:onClick="problemasList"
         android:textColor="@color/primaryTextColor" />
 
     <Button

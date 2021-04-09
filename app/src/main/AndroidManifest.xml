@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="intro.android.smartcity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartCity">
-        <activity android:name=".NotasPessoais.NotasPessoais"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".Problema_List" />
+        <activity android:name=".NotasPessoais.NotasPessoais" />
         <activity android:name=".NotasPessoais.AddNotas" />
         <activity android:name=".NotasPessoais.EditNotas" />
         <activity android:name=".MainActivity">
