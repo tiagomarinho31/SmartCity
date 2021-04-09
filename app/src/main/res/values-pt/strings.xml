@@ -15,4 +15,9 @@
     <string name="edit_note">Nota editada!</string>
     <string name="delete_note">Nota apagada!</string>
     <string name="text_app">Uma aplicação que permite uma ligação rápida e eficaz entre o cidadão e a cidade!</string>
+    <string name="login_username">Utilizador</string>
+    <string name="login_password">Palavra-passe</string>
+    <string name="login_error">Credenciais inválidas, preencha corretamente os campo</string>
+    <string name="problems_list">Lista de Problemas</string>
+    <string name="remember">Lembrar</string>
 </resources>

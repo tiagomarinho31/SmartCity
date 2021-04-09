@@ -15,4 +15,9 @@
     <string name="edit_note_error">Note not edited, fields empty</string>
     <string name="delete_note">Note deleted!</string>
     <string name="delete_note_error">Note not deleted, fields empty</string>
+    <string name="login_username">Username</string>
+    <string name="login_password">Password</string>
+    <string name="login_error">Invalid credentials, fill in the fields correctly</string>
+    <string name="problems_list">Problems List</string>
+    <string name="remember">Remember</string>
 </resources>

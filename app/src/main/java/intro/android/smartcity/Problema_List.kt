@@ -2,6 +2,7 @@ package intro.android.smartcity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,7 @@ import intro.android.smartcity.api.Problema
 import intro.android.smartcity.api.ServiceBuilder
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
+import retrofit2.Callback
 
 class Problema_List : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class Problema_List : AppCompatActivity() {
         val call = request.getProblemas()
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerview_problema)
 
-        call.enqueue(object : retrofit2.Callback<List<Problema>>{
+        call.enqueue(object : Callback<List<Problema>>{
             override fun onResponse(call: Call<List<Problema>>, response: Response<List<Problema>>){
                 if (response.isSuccessful){
                     recyclerView.apply {
@@ -36,5 +37,22 @@ class Problema_List : AppCompatActivity() {
                 Toast.makeText(this@Problema_List,"${t.message}", Toast.LENGTH_LONG).show()
             }
         })
+    }
+
+    fun getSingle(view: View){
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.getProblemasById(1)
+
+        call.enqueue(object : retrofit2.Callback<Problema>{
+            override fun onResponse(call: Call<Problema>, response: Response<Problema>){
+                if (response.isSuccessful){
+                    val c: Problema = response.body()!!
+                    Toast.makeText(this@Problema_List,c.tipo, Toast.LENGTH_SHORT).show()
+                    }
+                }
+            override fun onFailure(call: Call<Problema>, t: Throwable){
+                Toast.makeText(this@Problema_List,"${t.message}", Toast.LENGTH_SHORT).show()
+            }
+            })
     }
 }

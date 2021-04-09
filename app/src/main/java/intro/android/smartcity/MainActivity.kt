@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun problemasList(view: View) {
-        val intent = Intent(this, Problema_List::class.java)
+    fun login_activity(view: View) {
+        val intent = Intent(this, Login::class.java)
         startActivity(intent)
     }
 }

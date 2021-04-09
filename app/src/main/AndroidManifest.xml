@@ -11,11 +11,16 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartCity">
-        <activity android:name=".Login"></activity>
-        <activity android:name=".Problema_List" />
-        <activity android:name=".NotasPessoais.NotasPessoais" />
-        <activity android:name=".NotasPessoais.AddNotas" />
-        <activity android:name=".NotasPessoais.EditNotas" />
+        <activity android:name=".Login"
+            android:label="Login"></activity>
+        <activity android:name=".Problema_List"
+            android:label="@string/problems_list"/>
+        <activity android:name=".NotasPessoais.NotasPessoais"
+            android:label="@string/personalNotes"/>
+        <activity android:name=".NotasPessoais.AddNotas"
+            android:label="@string/insert"/>
+        <activity android:name=".NotasPessoais.EditNotas"
+            android:label="@string/edit"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
