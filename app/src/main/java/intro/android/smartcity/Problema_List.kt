@@ -1,5 +1,8 @@
 package intro.android.smartcity
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,9 +18,13 @@ import retrofit2.Response
 import retrofit2.Callback
 
 class Problema_List : AppCompatActivity() {
+
+    private lateinit var shared_preferences: SharedPreferences
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_problema_list)
+        shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getProblemas()
@@ -54,5 +61,15 @@ class Problema_List : AppCompatActivity() {
                 Toast.makeText(this@Problema_List,"${t.message}", Toast.LENGTH_SHORT).show()
             }
             })
+    }
+
+    fun logout(view: View){
+        val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
+        shared_preferences_edit.clear()
+        shared_preferences_edit.apply()
+
+        val intent = Intent(this@Problema_List, Login::class.java)
+        startActivity(intent)
+        finish()
     }
 }
