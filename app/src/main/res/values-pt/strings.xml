@@ -20,4 +20,6 @@
     <string name="login_error">Credenciais inválidas, preencha corretamente os campo</string>
     <string name="problems_list">Lista de Problemas</string>
     <string name="remember">Lembrar</string>
+    <string name="problems_map">Mapa de Problemas</string>
+    <string name="problems_report">Reportar Problemas</string>
 </resources>

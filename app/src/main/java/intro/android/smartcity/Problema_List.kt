@@ -19,12 +19,10 @@ import retrofit2.Callback
 
 class Problema_List : AppCompatActivity() {
 
-    private lateinit var shared_preferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_problema_list)
-        shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getProblemas()
@@ -63,13 +61,5 @@ class Problema_List : AppCompatActivity() {
             })
     }
 
-    fun logout(view: View){
-        val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
-        shared_preferences_edit.clear()
-        shared_preferences_edit.apply()
 
-        val intent = Intent(this@Problema_List, Login::class.java)
-        startActivity(intent)
-        finish()
-    }
 }

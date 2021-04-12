@@ -38,7 +38,7 @@ class Login : AppCompatActivity() {
         remember = shared_preferences.getBoolean("remeber", false)
 
         if(remember){
-            val intent = Intent(this@Login, Problema_List::class.java)
+            val intent = Intent(this@Login, Menu::class.java)
             startActivity(intent);
             finish()
         }
@@ -68,7 +68,7 @@ class Login : AppCompatActivity() {
                             shared_preferences_edit.putBoolean("remeber", checked_remember)
                             shared_preferences_edit.apply()
 
-                            val intent = Intent(this@Login, Problema_List::class.java)
+                            val intent = Intent(this@Login, Menu::class.java)
                             startActivity(intent)
                             finish()
                         }
@@ -79,10 +79,5 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this@Login,"${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
-
-
-
-
-
     }
 }
