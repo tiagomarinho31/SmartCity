@@ -33,6 +33,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.getProblemas()
+        var position: LatLng
+
+        call.enqueue(object : Callback<List<Problema>> {
+            override fun onResponse(call: Call<List<Problema>>, response: Response<List<Problema>>){
+                if (response.isSuccessful){
+                    problemas = response.body()!!
+                    for (problema in problemas){
+                        position = LatLng(problema.latitude.toDouble(), problema.longitude.toDouble())
+                        mMap.addMarker(MarkerOptions().position(position).title(problema.tipo + "-" + problema.descricao))
+                    }
+                }
+            }
+            override fun onFailure(call: Call<List<Problema>>, t: Throwable){
+                Toast.makeText(this@MapsActivity,"${t.message}", Toast.LENGTH_LONG).show()
+            }
+        })
 
     }
 
@@ -49,8 +67,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
+        /*val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))*/
     }
 }
