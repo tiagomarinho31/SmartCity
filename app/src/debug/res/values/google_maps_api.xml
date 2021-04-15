@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=65:CC:45:1D:9E:B5:16:38:2C:28:0C:1F:F1:10:53:0E:65:32:AB:C3%3Bintro.android.smartcity
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    intro.android.smartcity
+
+    SHA-1 certificate fingerprint:
+    65:CC:45:1D:9E:B5:16:38:2C:28:0C:1F:F1:10:53:0E:65:32:AB:C3
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyB1MwQza2CmjDV_cHZaThj1ITWZOCspi74</string>
+</resources>
