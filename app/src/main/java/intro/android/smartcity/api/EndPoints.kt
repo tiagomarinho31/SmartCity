@@ -21,4 +21,13 @@ interface EndPoints {
     @POST("/smartcity/api/utilizador_login")
     fun login(@Field("username") username: String?, @Field("password") password: String?): Call<OutputLogin>
 
+    @FormUrlEncoded
+    @POST("/smartcity/api/problema_post")
+    fun reportar(@Field("latitude") latitude: String?,
+                 @Field("longitude") longitude: String?,
+                 @Field("tipo") tipo: String?,
+                 @Field("descricao") descricao: String?,
+                 @Field("imagem") imagem: String?,
+                 @Field("utilizador_id") utilizador_id: Int?): Call<OutputReportar>
+
 }

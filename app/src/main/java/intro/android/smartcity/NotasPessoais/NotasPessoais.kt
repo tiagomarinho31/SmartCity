@@ -46,7 +46,6 @@ class NotasPessoais : AppCompatActivity(), CellClickListener {
         fab.setOnClickListener {
             val intent = Intent(this, AddNotas::class.java)
             startActivityForResult(intent, newNotasActivityRequestCode)
-
         }
     }
 

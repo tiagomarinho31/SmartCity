@@ -23,4 +23,12 @@
     <string name="problems_report">Problems Report</string>
     <string name="remember">Remember</string>
     <string name="title_activity_maps">Map</string>
+    <string name="type">Type</string>
+    <string name="description">Description</string>
+    <string name="report">Report</string>
+    <string name="insert_image">Insert Image</string>
+    <string name="reportar_error">Problem not saved, fields empty</string>
+    <string name="reportar_success">Problem saved</string>
+
+
 </resources>

@@ -27,10 +27,10 @@ class Menu : AppCompatActivity() {
         startActivity(intent)
     }
 
-    /*fun problemas_reportar(view: View){
+    fun problemas_reportar(view: View){
         val intent = Intent(this@Menu, Problema_Reportar::class.java)
         startActivity(intent)
-    }*/
+    }
 
     fun logout(view: View){
         val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()

@@ -22,4 +22,11 @@
     <string name="remember">Lembrar</string>
     <string name="problems_map">Mapa de Problemas</string>
     <string name="problems_report">Reportar Problemas</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="type">Tipo</string>
+    <string name="description">Descrição</string>
+    <string name="report">Reportar</string>
+    <string name="insert_image">Inserir Imagem</string>
+    <string name="reportar_error">Problema não foi salvo, campos vazios</string>
+    <string name="reportar_success">Problema salvo</string>
 </resources>
