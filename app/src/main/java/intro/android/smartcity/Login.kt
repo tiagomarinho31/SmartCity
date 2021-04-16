@@ -65,6 +65,7 @@ class Login : AppCompatActivity() {
                             val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
                             shared_preferences_edit.putString("username", username)
                             shared_preferences_edit.putString("password", password)
+                            shared_preferences_edit.putInt("id", c.id)
                             shared_preferences_edit.putBoolean("remeber", checked_remember)
                             shared_preferences_edit.apply()
 
