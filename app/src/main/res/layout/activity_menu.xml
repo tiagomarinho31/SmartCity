@@ -21,6 +21,16 @@
         app:srcCompat="@drawable/logo"
         android:layout_margin="50dp"/>
 
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/primaryColor"
+        android:gravity="center"
+        android:textSize="20dp"/>
+
     <Button
         android:id="@+id/button_mapa"
         android:layout_width="match_parent"

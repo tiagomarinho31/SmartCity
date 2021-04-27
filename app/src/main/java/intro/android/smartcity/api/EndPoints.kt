@@ -15,7 +15,7 @@ interface EndPoints {
     fun getProblemas(): Call<List<Problema>>
 
     @GET ("/smartcity/api/problema/{id}")
-    fun getProblemasById(@Path("id") id: Int): Call<Problema>
+    fun getProblemasById(@Path("id") id: String?): Call<List<Problema>>
 
     @FormUrlEncoded
     @POST("/smartcity/api/utilizador_login")
@@ -29,5 +29,19 @@ interface EndPoints {
                  @Field("descricao") descricao: String?,
                  @Field("imagem") imagem: String?,
                  @Field("utilizador_id") utilizador_id: Int?): Call<OutputReportar>
+
+    @FormUrlEncoded
+    @POST("/smartcity/api/problema_put/{id}")
+    fun editar(@Path("id") id: String?,
+               @Field("latitude") latitude: String?,
+               @Field("longitude") longitude: String?,
+               @Field("tipo") tipo: String?,
+               @Field("descricao") descricao: String?,
+               @Field("imagem") imagem: String?,
+               @Field("utilizador_id") utilizador_id: Int?): Call<OutputEditar>
+
+
+    @POST("/smartcity/api/problema_delete/{id}")
+    fun apagar(@Path("id") id: String?): Call<OutputApagar>
 
 }

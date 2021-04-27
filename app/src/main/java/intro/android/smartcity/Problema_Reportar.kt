@@ -30,7 +30,6 @@ class Problema_Reportar : AppCompatActivity() {
 
     private lateinit var editTipoView: EditText
     private lateinit var editDescricaoView: EditText
-    private lateinit var editImagemView: EditText
     private lateinit var shared_preferences: SharedPreferences
     private var latitude : Double = 0.0
     private var longitude : Double = 0.0
@@ -48,7 +47,6 @@ class Problema_Reportar : AppCompatActivity() {
 
         editTipoView = findViewById(R.id.tipo)
         editDescricaoView = findViewById(R.id.descricao)
-        editImagemView = findViewById(R.id.imagem)
         shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
@@ -80,7 +78,6 @@ class Problema_Reportar : AppCompatActivity() {
         val longitude = longitude
         val tipo = editTipoView.text.toString()
         val descricao = editDescricaoView.text.toString()
-        val imagem = editImagemView.text.toString()
         val utilizador_id = shared_preferences.getInt("id", 0)
 
         val call = request.reportar(
@@ -88,7 +85,7 @@ class Problema_Reportar : AppCompatActivity() {
                 longitude = longitude.toString(),
                 tipo = tipo,
                 descricao = descricao,
-                imagem = imagem,
+                imagem = "Imagem",
                 utilizador_id = utilizador_id)
 
         call.enqueue(object : Callback<OutputReportar> {

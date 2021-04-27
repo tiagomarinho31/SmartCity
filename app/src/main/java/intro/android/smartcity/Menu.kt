@@ -6,15 +6,22 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
+import intro.android.smartcity.R
 
 class Menu : AppCompatActivity() {
 
     private lateinit var shared_preferences: SharedPreferences
+    private lateinit var textWelcome: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
+        val username = shared_preferences.getString("username", "")
+        textWelcome = findViewById(R.id.welcome)
+        var welcome = R.string.welcome
+        textWelcome.text = "Welcome " + "$username"
     }
 
     fun problemas_lista(view: View){

@@ -1,8 +1,5 @@
 package intro.android.smartcity
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -44,22 +41,6 @@ class Problema_List : AppCompatActivity() {
         })
     }
 
-    fun getSingle(view: View){
-        val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call = request.getProblemasById(1)
-
-        call.enqueue(object : retrofit2.Callback<Problema>{
-            override fun onResponse(call: Call<Problema>, response: Response<Problema>){
-                if (response.isSuccessful){
-                    val c: Problema = response.body()!!
-                    Toast.makeText(this@Problema_List,c.tipo, Toast.LENGTH_SHORT).show()
-                    }
-                }
-            override fun onFailure(call: Call<Problema>, t: Throwable){
-                Toast.makeText(this@Problema_List,"${t.message}", Toast.LENGTH_SHORT).show()
-            }
-            })
-    }
 
 
 }

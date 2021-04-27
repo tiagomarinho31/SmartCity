@@ -29,6 +29,12 @@
     <string name="insert_image">Insert Image</string>
     <string name="reportar_error">Problem not saved, fields empty</string>
     <string name="reportar_success">Problem saved</string>
+    <string name="edit_problem">Problem edited!</string>
+    <string name="edit_problem_error">Problem not edited, fields empty</string>
+    <string name="delete_problem">Problem deleted!</string>
+    <string name="delete_problem_error">Problem not deleted, fields empty</string>
+    <string name="id_error_edit">You are not allowed to edit this problem!</string>
+    <string name="welcome">Welcome </string>
 
 
 </resources>

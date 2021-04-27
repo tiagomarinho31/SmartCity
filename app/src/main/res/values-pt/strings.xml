@@ -29,4 +29,10 @@
     <string name="insert_image">Inserir Imagem</string>
     <string name="reportar_error">Problema não foi salvo, campos vazios</string>
     <string name="reportar_success">Problema salvo</string>
+    <string name="edit_problem">Problema editado!</string>
+    <string name="edit_problem_error">Problema não foi editado, campos vazios</string>
+    <string name="delete_problem">Problema apagado!</string>
+    <string name="delete_problem_error">Problema não foi apagado, campos vazios</string>
+    <string name="id_error_edit">Não tens permissão para editar este problema!</string>
+    <string name="welcome">"Bem-Vindo "</string>
 </resources>

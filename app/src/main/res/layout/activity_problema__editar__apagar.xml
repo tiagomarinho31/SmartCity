@@ -7,7 +7,7 @@
     tools:context=".Problema_Reportar">
 
     <EditText
-        android:id="@+id/tipo"
+        android:id="@+id/edit_tipo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -18,7 +18,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/descricao"
+        android:id="@+id/edit_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -29,14 +29,33 @@
         android:textSize="18sp" />
 
 
-    <Button
-        android:id="@+id/button_reportar"
+    <!--<Button
+        android:id="@+id/button_imagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@color/primaryColor"
-        android:text="@string/report"
-        android:onClick="reportar"
+        android:text="@string/insert_image"
+        android:textColor="@color/primaryTextColor" />-->
+
+
+
+    <Button
+        android:id="@+id/button_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/primaryColor"
+        android:text="@string/edit"
+        android:textColor="@color/primaryTextColor" />
+
+    <Button
+        android:id="@+id/button_apagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/primaryColor"
+        android:text="@string/delete"
         android:textColor="@color/primaryTextColor" />
 
 </LinearLayout>
