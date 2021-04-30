@@ -1,39 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Login"
     android:orientation="vertical"
     android:padding="16dp">
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
+        android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"
-        android:layout_weight="1"
         app:srcCompat="@drawable/logo"
         android:layout_gravity="center"/>
 
-
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/text_app"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textColor="@color/primaryColor"/>
+        android:fontFamily="sans-serif-light"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/login_username"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/login_password"
+        android:inputType="textPassword"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox_Remeber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/remember"
+            android:layout_weight="3"/>
 
         <Button
             android:id="@+id/button_start"
@@ -41,23 +61,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@color/primaryColor"
-            android:text="@string/start"
+            android:text="Login"
+            android:onClick="login"
             android:textColor="@color/primaryTextColor"
-            android:onClick="login_activity"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/button_notasPessoais"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@color/primaryColor"
-            android:text="@string/personalNotes"
-            android:textColor="@color/primaryTextColor"
-            android:onClick="notasPessoais"
-            android:layout_weight="1"/>
+            android:layout_weight="2" />
 
     </LinearLayout>
-
 
 </LinearLayout>

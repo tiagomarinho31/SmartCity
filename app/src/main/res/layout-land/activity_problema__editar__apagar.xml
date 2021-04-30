@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Problema_Reportar">
+
+    <EditText
+        android:id="@+id/edit_tipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/type"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edit_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/description"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
+
+
+    <!--<Button
+        android:id="@+id/button_imagem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/primaryColor"
+        android:text="@string/insert_image"
+        android:textColor="@color/primaryTextColor" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_editar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/primaryColor"
+            android:text="@string/edit"
+            android:textColor="@color/primaryTextColor"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/button_apagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/primaryColor"
+            android:text="@string/delete"
+            android:textColor="@color/primaryTextColor"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
