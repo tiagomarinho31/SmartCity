@@ -5,6 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
+import android.graphics.Color
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +20,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
@@ -57,6 +60,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getProblemas()
         var position: LatLng
+        val utilizador_id = shared_preferences.getInt("id", 0)
 
         call.enqueue(object : Callback<List<Problema>> {
             override fun onResponse(call: Call<List<Problema>>, response: Response<List<Problema>>){
@@ -64,7 +68,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                     problemas = response.body()!!
                     for (problema in problemas){
                         position = LatLng(problema.latitude.toDouble(), problema.longitude.toDouble())
-                        mMap.addMarker(MarkerOptions().position(position).title(problema.id.toString()).snippet(problema.tipo + "-" + problema.descricao))
+                        if(problema.utilizador_id == utilizador_id){
+                            mMap.addMarker(MarkerOptions().position(position).title(problema.id.toString()).snippet(problema.tipo + "-" + problema.descricao))
+                                    .setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                        }else{
+                            mMap.addMarker(MarkerOptions().position(position).title(problema.id.toString()).snippet(problema.tipo + "-" + problema.descricao))
+                        }
+
                     }
                 }
             }

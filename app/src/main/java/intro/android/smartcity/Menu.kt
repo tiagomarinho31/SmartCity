@@ -21,7 +21,7 @@ class Menu : AppCompatActivity() {
         val username = shared_preferences.getString("username", "")
         textWelcome = findViewById(R.id.welcome)
         var welcome = R.string.welcome
-        textWelcome.text = "Welcome " + "$username"
+        textWelcome.text = "$welcome " + "$username"
     }
 
     fun problemas_lista(view: View){
